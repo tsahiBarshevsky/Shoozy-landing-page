@@ -29,6 +29,17 @@ a
     text-decoration: null; /*Won't display the underline after first click*/
 }
 
+#progress /*Using # beacuse it's an ID*/
+{
+    height: 5px;
+    width: 0;
+    opacity: 0.5;
+    background-color: #e43e3e;
+    position: fixed; /*Permanent position*/
+    top: 0;
+    z-index: 99999;
+}
+
 .content
 {
     width: 80%;
