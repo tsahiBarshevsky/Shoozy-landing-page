@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+
+* /*Special selector which selects all the HTML's elements*/
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ececec;
+    font-size: 18px;
+    color: black;
+    overflow-x: hidden; /*The webite will not move right or left*/
+    font-family: 'heebo', sans-serif;
+}
+
+a
+{
+    cursor: pointer; /*Cursor will appear when the mouse is on the button*/
+    text-decoration: null; /*Won't display the underline after first click*/
+}
+
+.content
+{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 930px) /*Must appear under a selector*/
+{
+    .content
+    {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 560px) /*Must appear under a selector*/
+{
+    .content
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+header
+{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('Images/header-background.jpg');
+    background-size: cover;
+}
+
+.nav-bar
+{
+    display: flex; /*Side by side in one line*/
+    justify-content: space-between; /*Separate the elements; one to left, the other to right*/
+}
+
+.nav-bar li /*Spesific selector for list item*/
+{
+    display: inline-block; /*Side by side*/
+    margin: 0 20px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.nav-bar li:hover /*Style will appear only when the mouse is on the element*/
+{
+    color: #c23616;
+}
+
+.main-logo
+{
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+}
+
+.hero
+{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+button
+{
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #d1654a;
+    font-family: 'heebo', sans-serif;
+    outline: none;   /*Border*/
+    color: white;
+    cursor: pointer; 
+    box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25);
+}
+
+/*Fit to small screens*/
+@media screen and (max-width: 560px)
+{
+    header
+    {
+        text-align: center;
+        height: 420px;
+    }
+
+    .nav-bar
+    {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .nav-bar .main-logo
+    {
+        height: 70px;
+        width: 70px;
+    }
+
+    .nav-bar ul
+    {
+        padding: 0;
+    }
+
+    .nav-bar li
+    {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .hero
+    {
+        font-size: 42px;
+        margin: 0 auto 20px; /*Top; Sides; Bottom*/
+    }
+}
+
+.branch-container
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.branch-card
+{
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.card-content
+{
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #e4e4e4;
+}
+
+.card-content h3
+{
+    margin: 0;
+    line-height: 1;
+}
+
+@media screen and (max-width: 780px)
+{
+    .branch-container
+    {
+        flex-direction: column;
+    }
+
+    .branch-card
+    {
+        display: flex;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .branch-card .card-content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+.feature-box
+{
+    position: relative;
+    width: calc(100% / 3);
+    height: calc(100vw / 3);
+    overflow: hidden;
+    float: right;
+}
+
+.feature-box img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s; /*All animation will take 1 second*/
+}
+
+.feature-box:hover img
+{
+    opacity: 0.2;
+    transform: scale(1.2); /*Changes element's size*/
+}
+
+.feature-description
+{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -70%); /*Changes element's position*/
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.feature-box:hover .feature-description
+{
+    opacity: 1;
+    transition: 1s;
+}
+
+@media screen and (max-width: 460px)
+{
+    .feature-description
+    {
+        font-size: 16px;
+    }
+}
+
+.app-container
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.app-store-logo, .app-view
+{
+    width: 200px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 460px)
+{
+    .app-container
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .app-store-logo
+    {
+        margin-top: 20px;
+    }
+
+    .app-view
+    {
+        margin-bottom: 20px;
+    }
+}
+
+footer
+{
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: white
+}
+
+footer ul
+{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+footer li a, footer li a:active, footer li a:visited
+{
+    color: white;
+}
+
+footer p
+{
+    color:#999;
+}
