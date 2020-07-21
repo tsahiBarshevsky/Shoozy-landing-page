@@ -13,26 +13,26 @@
                 <div class="nav-bar"> <!--Navigator bar-->
                     <img class="main-logo" src="Images/logo-black.png" alt="shoozy's logo">
                     <ul> <!--Unordered list-->
-                        <li><a>עלינו</a></li> <!--List item-->
-                        <li><a>סניפים</a></li>
-                        <li><a>האפליקציה שלנו</a></li>
+                        <li><a href="#info">עלינו</a></li> <!--List item-->
+                        <li><a href="#branches">סניפים</a></li>
+                        <li><a href="#appliciation">האפליקציה שלנו</a></li>
                     </ul> 
                 </div>
                 <h1 class="hero">נעליים שכיף לנעול</h1>
                 <div>
-                    <button>סניפים</button>
-                    <button>האפליקציה שלנו</button>
+                    <button id="btnBranches"><a href="#branches">סניפים</a></button>
+                    <button id="btnApp"><a href="#appliciation">האפליקציה שלנו</a></button>
                 </div>
             </div>
         </header>
         <!--Company's description-->
-        <section class="content"> <!--Will help to the search engine to find the website-->
+        <section id="info" class="content"> <!--Will help to the search engine to find the website-->
             <h2>קצת עלינו</h2>
             <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
                 סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. מוסן מנת. להאמית קרהשק סכעיט דז מא, מנכם למטכין נשואי מנורך. נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק - וענוף ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.</p>
         </section>
         <!--Company's branches-->
-        <section class="content">
+        <section id="branches" class="content">
             <h2>הסניפים שלנו</h2>
             <div class="branch-container">
                 <div class="branch-card">
@@ -89,7 +89,8 @@
             </div>
         </section>
         <!--App's section-->
-        <section class="content app-container"> <!--Each element can have multiple classes-->
+        <section id="appliciation" class="content app-container"> <!--Each element can have multiple classes-->
+            <h2>האפליקציה שלנו:</h2>
             <img class="app-view" alt="shoozy app" src="Images/iphone-app.png">
             <img class="app-store-logo" alt="app store logo" src="Images/app-store-logos.png">
         </section>
@@ -102,9 +103,12 @@
             </ul>
             <p>כל הזכויות שמורות - shoozy 2020</p>
         </footer>
+        <div id="backToTop">
+            <a href="#top">
+                <img class="backToTop" src="Images/back-to-top.png" alt="Back to top">
+            </a>
+        </div>
         <!--JS part-->
-        <script src="script.js">
-
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
