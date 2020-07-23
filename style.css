@@ -386,8 +386,8 @@ footer p
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 245px;
-    right: 675px;
+    top: 250px;
+    right: 680px;
  }
   
  .close:hover, .close:focus
@@ -401,3 +401,25 @@ footer p
  {
      color: black;
  }
+
+/*Scrollbar style
+
+ /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c2351688;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #911d1d98; 
+  }
