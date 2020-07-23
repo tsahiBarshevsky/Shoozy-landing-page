@@ -96,18 +96,41 @@
         <!--Footer-->
         <footer>
             <ul>
-                <li><a href="#">צור קשר</a></li>
-                <li><a href="#">ביקורות</a></li>
-                <li><a href="#">דווח על תקלה</a></li>
+                <li><a>צור קשר</a></li>
+                <li><a>ביקורות</a></li>
+                <li><a>דווח על תקלה</a></li>
+                <li>
+                    <a id="modalLink">אודות דף זה</a>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content" data-backdrop="static" data-keyboard="false">
+                            <span class="close">&times;</span>
+                            <p id="para">דף נחיתה זה נבנה ועוצב על ידי צחי ברשבסקי לצרכי תרגול</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <p>כל הזכויות שמורות - shoozy 2020</p>
         </footer>
+        <!--Back to top button-->
         <div id="backToTop">
             <a href="#top">
                 <img class="backToTop" src="Images/back-to-top.png" alt="Back to top">
             </a>
         </div>
+        
         <!--JS part-->
         <script src="script.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".close").click(function(){
+                    $("#modal-content").modal({
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                });
+            });
+            </script>
     </body>
 </html>
